@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    /* Base Options */
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    // FIX: Removed "DOMIterable" as it was causing an error. 
+    // "DOM" and "ES2022" are sufficient for modern web apps.
+    "lib": ["ES2022", "DOM"], 
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler Mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Type Checking */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
